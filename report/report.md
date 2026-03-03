@@ -18,6 +18,11 @@ linestretch: 1.5
 papersize: a4
 documentclass: scrreprt
 
+# Fonts - ADDED THESE TO FIX "MISSING CHARACTER" ERRORS
+mainfont: "DejaVu Serif"
+sansfont: "DejaVu Sans"
+monofont: "DejaVu Sans Mono"
+
 # Polyglossia/Babel
 polyglossia-lang:
   name: russian
@@ -49,15 +54,28 @@ header-includes:
 # Выполнение лабораторной работы
 
 ## Начальная настройка
-Я установил необходимые инструменты и настроил глобальную идентификацию с помощью следующих команд:
-* `git config --global user.name "Khadir Ali"`
-* `git config --global user.email "alimukhtarkhadir@gmail.com"`
+Я установил необходимые инструменты и настроил глобальную идентификацию. На скриншоте (рис. [-@fig:01]) показана настройка имени пользователя и адреса электронной почты.
+
+![Настройка конфигурации Git](config.png){#fig:01 width=70%}
 
 ## Настройка SSH и GPG
-Я сгенерировал SSH-ключ Ed25519 для доступа к GitHub. Также я сгенерировал GPG-ключ RSA 4096 бит для подписи коммитов. Мой ID GPG-ключа: **ED9B8ED5C953D1A7**.
+Я сгенерировал SSH-ключ Ed25519 для доступа к GitHub. Также я сгенерировал GPG-ключ RSA 4096 бит для подписи коммитов. Настройка ключей в профиле GitHub представлена на рис. [-@fig:02].
+
+![Настройка ключей в профиле GitHub](keys.png){#fig:02 width=70%}
+
+## Авторизация GitHub CLI
+Я выполнил авторизацию в GitHub через терминал с помощью утилиты `gh` (рис. [-@fig:03]).
+
+![Авторизация GitHub CLI](gh_auth.png){#fig:03 width=70%}
 
 ## Работа с репозиторием
-Используя GitHub CLI, я создал репозиторий `study_2025-2026_os-intro` из шаблона. Я выполнил подписанный коммит, который теперь отображается на GitHub с меткой "Verified".
+Используя GitHub CLI, я создал репозиторий `study_2025-2026_os-intro` из шаблона. Я проверил структуру каталогов репозитория (рис. [-@fig:04]).
+
+![Структура каталогов курса](structure.png){#fig:04 width=70%}
+
+Я выполнил подписанный коммит, который теперь отображается на GitHub с зеленой меткой "Verified" (рис. [-@fig:05]).
+
+![Верифицированный коммит на GitHub](verified.png){#fig:05 width=70%}
 
 # Контрольные вопросы
 
